@@ -659,36 +659,41 @@ img {
 }
 .modal-label {
   color: var(--lightslate, #8e8f99);
-  /*display: inline-block;*/
-  /* Small Text */
-  font-family: Roboto;
   font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
 .input-wrap {
-  /* display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  border: 2px solid red;*/
+  position: relative;
 }
-/*.modal-label {
-  width: 100%;
-}*/
+
 .modal-input {
   width: 100%;
   height: 40px;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
-  /* margin-bottom: 8px;*/
   padding-left: 38px;
   padding-right: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-input:focus + .icon-modal {
+  fill: #4d5ae5;
+}
+.icon-modal {
+  fill: #2e2f42;
+  stroke: transparent;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-comment {
   width: 100%;
@@ -700,7 +705,10 @@ img {
   padding: 8px 16px;
   resize: none;
   border-radius: 4px;
-  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  outline: transparent;
+}
+.modal-comment:focus {
+  border-color: #4d5ae5;
 }
 
 textarea::placeholder {
@@ -710,5 +718,36 @@ textarea::placeholder {
   letter-spacing: 0.04em;
   padding-top: 8px;
   height: 120px;
+
   /*padding-left: 16px;*/
+}
+
+.chek-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  stroke-width: 1px;
+  stroke: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  stroke: transparent;
+  fill: transparent;
+}
+
+.policy-link {
+  color: var(--iris, #4d5ae5);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+}
+.chek-input:checked + .chek-span {
+  fill: var(--ocean, #404bbf);
+  background-color: ;
+  fill: var(--ocean, #404bbf);
+  stroke-width: 1px;
+  stroke: var(--ocean, #404bbf);
 }
