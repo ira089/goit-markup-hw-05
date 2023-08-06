@@ -378,9 +378,10 @@ img {
   display: flex;
   /* gap: 120px;*/
   align-items: baseline;
+  justify-content: space-between;
 }
 .container-logo {
-  margin-right: 120px;
+  /* margin-right: 120px;*/
 }
 .footer-social {
   display: flex;
@@ -411,7 +412,7 @@ img {
 }
 /*========footer-form===========*/
 .footer-form {
-  margin-left: 80px;
+  /* margin-left: 80px;*/
 }
 
 .footer-input {
@@ -444,6 +445,8 @@ img {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
 }
 .footer-button-icon {
   fill: #fff;
