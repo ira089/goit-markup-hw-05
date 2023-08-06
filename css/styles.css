@@ -773,7 +773,7 @@ textarea::placeholder {
   margin-bottom: 24px;
 }
 .chek-label {
-  display: flex;
+  /*display: flex;*/
   align-items: center;
   color: var(--lightslate, #8e8f99);
   font-size: 12px;
@@ -794,12 +794,11 @@ textarea::placeholder {
 }
 
 .chek-span {
-  /*position: absolute;*/
+  display: inline-flex;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  display: inline-flex;
   margin-right: 8px;
   align-items: center;
   justify-content: center;
